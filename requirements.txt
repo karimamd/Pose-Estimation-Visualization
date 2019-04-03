@@ -1,0 +1,16 @@
+requirements:
+
+python3 -m pip install fs
+python3 -m pip install pcloud
+
+wget https://www.dropbox.com/s/h9wyzbqd58h63yk/val_col.csv
+wget https://www.dropbox.com/s/032nrgzm7fik5zf/val_resized.zip
+wget https://www.dropbox.com/s/ov5vb9mip2093ez/train_resized_.zip
+wget https://www.dropbox.com/s/nojosuy51vn34ft/train_col.csv
+  
+import zipfile
+with zipfile.ZipFile("train_resized_.zip","r") as zip_ref:
+    zip_ref.extractall("/")
+
+with zipfile.ZipFile("val_resized.zip","r") as zip_ref:
+    zip_ref.extractall("/")
