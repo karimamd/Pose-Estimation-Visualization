@@ -41,9 +41,15 @@ class TL_Model(nn.Module):
     for i in range(4):
       x = F.relu(self.__dict__['_modules']['cn'+str(i)](x))
       x = self.dp(x)
-    for i in range(3):
-      x = F.relu(self.dc(x))
-      x = self.bn(x)
+    
+    x = F.relu(self.dc(x))
+    x = self.bn(x)
+    x = self.dp(x)
+    x = F.relu(self.dc(x))
+    x = self.bn(x)
+    x = self.dp(x)
+    x = F.relu(self.dc(x))
+    x = self.bn(x)
         
       
     return x
