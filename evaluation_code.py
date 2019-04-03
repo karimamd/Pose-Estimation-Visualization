@@ -9,7 +9,7 @@ saved on pcloud and then upload those images to a folder in pcloud to qualitativ
 from imports import *
 ##################################
 from annotations_to_heatmaps import *
-from pcloud import *
+from pcloudd import *
 from model import *
 
 model_path = '/models/resnet_drop/resnet_drop.pth.tar'
